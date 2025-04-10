@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYD英语培训-首页</title>
+  <style>
+    /* 全局样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 轮播图样式 */
+    .carousel {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    /* 课程导航栏样式 */
+    .nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .nav ul li {
+      cursor: pointer;
+    }
+
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* 特色服务介绍样式 */
+    .service {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .service h2 {
+      margin-bottom: 20px;
+    }
+
+    .service p {
+      margin-bottom: 10px;
+    }
+
+    /* 学员评价与推荐样式 */
+    .review {
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+
+    .review h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .review .review-item {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    /* 行动召唤按钮样式 */
+    .cta {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .cta button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  
+
+  <!-- 课程导航栏 -->
+  <div class="nav">
+    <ul>
+      <li><a href="#">通用英语</a></li>
+      <li><a href="#">考试英语</a></li>
+      <li><a href="#">商务英语</a></li>
+      <li><a href="#">少儿英语</a></li>
+    </ul>
+  </div>
+<!-- 轮播图 -->
+  <!-- <div class="carousel">
+    <img src="https://via.placeholder.com/1200x400" alt="轮播图1" class="active">
+  </div> -->
+  <!-- 特色服务介绍 -->
+  <div class="service">
+    <h2>我们的特色服务</h2>
+    <p>一对一辅导</p>
+    <p>个性化学习计划</p>
+    <p>课后答疑</p>
+  </div>
+
+  <!-- 学员评价与推荐 -->
+  <div class="review">
+    <h2>学员评价</h2>
+    <div class="review-item">
+      <p>"在这里学习英语，进步非常明显，老师很专业，课程也很有趣。" - 小明</p>
+    </div>
+    <div class="review-item">
+      <p>"通过培训，我顺利通过了雅思考试，感谢老师们的指导！" - 小红</p>
+    </div>
+  </div>
+
+  <!-- 行动召唤按钮 -->
+  <div class="cta">
+    <button>立即报名</button>
+  </div>
+
+  <script>
+    // 轮播图自动切换逻辑
+    const images = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        if (i === index) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    setInterval(nextImage, 3000); // 每3秒切换一次图片
+    showImage(currentIndex);
+  </script>
+</body>
+
+</html>
