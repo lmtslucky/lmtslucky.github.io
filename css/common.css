@@ -3,3 +3,7 @@ img.logo{
     width: 120px;
     max-width: 120px;
   }
+
+video{
+  max-height: 350px;
+}
