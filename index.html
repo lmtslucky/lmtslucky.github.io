@@ -1,174 +1,118 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AYD英语培训-首页</title>
-  <style>
-    /* 全局样式 */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    /* 轮播图样式 */
-    .carousel {
-      width: 100%;
-      height: 400px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .carousel img {
-      width: 100%;
-      height: 100%;
-      display: none;
-    }
-
-    .carousel img.active {
-      display: block;
-    }
-
-    /* 课程导航栏样式 */
-    .nav {
-      background-color: #333;
-      padding: 10px;
-    }
-
-    .nav ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .nav ul li {
-      cursor: pointer;
-    }
-
-    .nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    /* 特色服务介绍样式 */
-    .service {
-      padding: 30px;
-      text-align: center;
-    }
-
-    .service h2 {
-      margin-bottom: 20px;
-    }
-
-    .service p {
-      margin-bottom: 10px;
-    }
-
-    /* 学员评价与推荐样式 */
-    .review {
-      padding: 30px;
-      background-color: #f4f4f4;
-    }
-
-    .review h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .review .review-item {
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 5px;
-    }
-
-    /* 行动召唤按钮样式 */
-    .cta {
-      text-align: center;
-      padding: 30px;
-    }
-
-    .cta button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="js/tailwindcss.js"></script>
+    <link href="css/all.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <title>AYD英语培训-首页</title>
 </head>
 
-<body>
-  
+<body class="font-sans bg-gray-100 text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-blue-600 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+          <img src="img/logo.png" class="logo"/>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-white hover:text-gray-300">首页</a></li>
+                <li><a href="show.html"  class="text-white hover:text-gray-300">课堂风采</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- 课程导航栏 -->
-  <div class="nav">
-    <ul>
-      <li><a href="#">通用英语</a></li>
-      <li><a href="#">考试英语</a></li>
-      <li><a href="#">商务英语</a></li>
-      <li><a href="#">少儿英语</a></li>
-    </ul>
-  </div>
-<!-- 轮播图 -->
-  <!-- <div class="carousel">
-    <img src="https://via.placeholder.com/1200x400" alt="轮播图1" class="active">
-  </div> -->
-  <!-- 特色服务介绍 -->
-  <div class="service">
-    <h2>我们的特色服务</h2>
-    <p>一对一辅导</p>
-    <p>个性化学习计划</p>
-    <p>课后答疑</p>
-  </div>
+    <!-- 英雄部分 -->
+    <section class="bg-cover bg-center py-24">
+        <div class="container mx-auto text-center text-white">
+            <h1 class="text-4xl font-bold mb-4">提升英语技能，开启无限可能</h1>
+            <p class="text-lg mb-8">专业的英语培训，为你的未来助力</p>
+        </div>
+    </section>
 
-  <!-- 学员评价与推荐 -->
-  <div class="review">
-    <h2>学员评价</h2>
-    <div class="review-item">
-      <p>"在这里学习英语，进步非常明显，老师很专业，课程也很有趣。" - 小明</p>
+     
+  <!-- 课程部分 -->
+  <section class="py-16">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">我们的课程</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <i class="fas fa-book text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">原版英语启蒙</h3>
+                <p class="text-gray-600">原版教材 + 趣味互动，夯实语言基础1-6级，完成后词汇量可到达2000。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">新概念英语</h3>
+                <p class="text-gray-600">从基础时态到复杂句型，循序渐进构建扎实语法框架。 </p>
+                <p class="text-gray-600">每课含情景对话、角色扮演，让孩子自信开口说英语！</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <i class="fas fa-microphone text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">暑假班</h3>
+                <p class="text-gray-600">每班限 8-15人，关注每个孩子成长。</p>
+                <p class="text-gray-600">TESOL 认证教师 、国内教师资格证+ 10 年教学经验。 </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+              <i class="fas fa-microphone text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">晚辅班</h3>
+              <p class="text-gray-600">1 - 9 年级，作业答疑 + 知识巩固，学习效率翻倍 </p>
+          </div>
+        </div>
     </div>
-    <div class="review-item">
-      <p>"通过培训，我顺利通过了雅思考试，感谢老师们的指导！" - 小红</p>
-    </div>
-  </div>
+</section>
 
-  <!-- 行动召唤按钮 -->
-  <div class="cta">
-    <button>立即报名</button>
-  </div>
+    <!-- 我们的优势部分 -->
+    <section class="py-16 bg-gray-200">
+      <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-8">我们的优势</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                  <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                  <h3 class="text-xl font-bold mb-2">小班制教学</h3>
+                  <p class="text-gray-600">每班限 8 - 15 人，关注每个孩子成长。</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                  <i class="fas fa-chalkboard-teacher text-4xl text-blue-600 mb-4"></i>
+                  <h3 class="text-xl font-bold mb-2">专业师资团队</h3>
+                  <p class="text-gray-600">TESOL 认证教师 、国内教师资格证 + 10 年教学经验。</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                  <i class="fas fa-gamepad text-4xl text-blue-600 mb-4"></i>
+                  <h3 class="text-xl font-bold mb-2">独特课堂模式</h3>
+                  <p class="text-gray-600">游戏化教学 + 项目式学习，激发兴趣。</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                  <i class="fas fa-award text-4xl text-blue-600 mb-4"></i>
+                  <h3 class="text-xl font-bold mb-2">多元成长活动</h3>
+                  <p class="text-gray-600">英语戏剧、绘本创作、英语演讲比赛。</p>
+              </div>
+          </div>
+      </div>
+  </section>
 
-  <script>
-    // 轮播图自动切换逻辑
-    // const images = document.querySelectorAll('.carousel img');
-    // let currentIndex = 0;
 
-    // function showImage(index) {
-    //   images.forEach((img, i) => {
-    //     if (i === index) {
-    //       img.classList.add('active');
-    //     } else {
-    //       img.classList.remove('active');
-    //     }
-    //   });
-    // }
+      <!-- 联系我们部分 -->
+      <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">联系我们</h2>
+            <div class="text-center">
+              <i class="fas fa-phone text-4xl text-blue-600 mb-4"></i>
+              <p class="text-xl font-bold">咨询与报名电话：193 2309 5376 </p>
+          </div>
+            <div class="text-center mt-12">
+                <img src="img/wx.jpeg" alt="二维码" class="w-48 h-48 mx-auto mb-4">    
+          </div>
+        </div>
+    </section>
 
-    // function nextImage() {
-    //   currentIndex = (currentIndex + 1) % images.length;
-    //   showImage(currentIndex);
-    // }
-
-    // setInterval(nextImage, 3000); // 每3秒切换一次图片
-    // showImage(currentIndex);
-  </script>
+    <!-- 页脚 -->
+    <footer class="bg-blue-600 p-4 text-white text-center">
+        <p>&copy; AYD英语培训@2025，保留所有权利.</p>
+    </footer>
 </body>
 
 </html>
+    
